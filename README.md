@@ -54,3 +54,7 @@ cut | 超出长度时是否要截断内容 | Boolean | false
 ### change-pass
 
 当验证结果发生改变时，返回一个布尔值，表示当前是否通过长度验证。
+
+## 更新日志
+
+[更新日志](https://github.com/ct-adc/adc-textarea/blob/master/CHANGELOG.md)
