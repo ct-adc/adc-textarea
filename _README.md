@@ -1,6 +1,6 @@
 ## textarea
 
-一个可以自带功能的textarea
+可以自定输入规范的textarea
 
 ## [在线demo](https://codepen.io/rubyisapm/pen/pPQLOj)
 

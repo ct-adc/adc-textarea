@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 module.exports = {
     entry: {
-        index:'./src/component/textarea.vue'
+        index:'./src/component/main.vue'
     },
     output: {
         path: path.resolve(__dirname, '../lib'),
@@ -29,10 +29,18 @@ module.exports = {
         ]
     },
     resolve: {
-        modules:[path.resolve(__dirname, 'src/js/component'),path.resolve(__dirname, 'src/js/module'),'node_modules'],
+        modules:['src/component','node_modules'],
         extensions: ['.js', '.json','.vue','.css'],
         alias: {
             'vue$': 'vue/dist/vue.common.js'
+        }
+    },
+    externals: {
+        'ct-utility': {
+            commonjs: 'ct-utility',
+            commonjs2: 'ct-utility',
+            amd: 'ct-utility',
+            root: 'ct-utility'
         }
     }
 };

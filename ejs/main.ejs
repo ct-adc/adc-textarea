@@ -9,13 +9,31 @@
 </head>
 <body>
 <div id="app">
-    <ct-adc-textarea :limited-length="limitedLength"
-                     :cut="cut"
-                     by-byte
-                     @change-pass="changePass"
-                     @change="change">
-
-    </ct-adc-textarea>
+    <div class="col-sm-6">
+        <ct-adc-textarea v-model="value"
+                         :maxlength="limitedLength"
+                         :cut="cut"
+                         :regexp="/\d/g"
+                         :replace-by-empty="replaceByEmpty"
+                         by-byte
+                         @input="input"
+                         @change-pass="changePass"
+                         @change="change">
+            <template slot-scope="scope">
+                <span :class="!scope.pass.length ? 'text-danger' : 'text-success'">{{scope.length}}</span>
+                <template v-if=" limitedLength !== -1">
+                    /{{limitedLength}}
+                    <span class="pull-right text-danger" v-if="!scope.pass.length">
+                    长度不符合要求
+                </span>
+                    <span class="pull-right text-danger" v-else-if="!scope.pass.format">
+                    格式不符合要求
+                </span>
+                </template>
+            </template>
+        </ct-adc-textarea>
+        {{value}}
+    </div>
 </div>
 
 <%= htmlWebpackPlugin.options.script %>
