@@ -4,7 +4,7 @@
 
 ## 组件示例图
 
-[!img](图片地址)
+![img](https://github.com/ct-adc/adc-textarea/blob/master/textarea.png)
 
 ## 在线demo
 
@@ -112,7 +112,7 @@ focus | focus事件 | 无 |
 
 ## 更新日志
 
-[更新日志]({CHANGELOG.md的线上地址})
+[更新日志](https://github.com/ct-adc/adc-textarea/blob/dev/changelog.md)
 
 ## 外部资源依赖列表
 
