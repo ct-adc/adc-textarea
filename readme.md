@@ -78,7 +78,7 @@ new Vue({
 
 参数 | 说明 | 类型 | 默认值 | 可选值 | 描述 |
 --- | --- | --- | --- | ---- | ---
-maxLength | 控制的字符长度 | Number | -1（不限） | | 
+maxlength | 控制的字符长度 | Number | -1（不限） | | 
 cut | 超出长度时是否要截断内容 | Boolean | false | | 
 byByte | 是否根据字节算长度 | Boolean | false | | 
 regexp | 设置不匹配内容的正则 | RegExp | undefined | | 当匹配该正则时，被认为是非法的内容
